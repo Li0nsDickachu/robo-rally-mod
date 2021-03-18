@@ -76,16 +76,35 @@ minetest.register_node("robo_ally:repairsite2", {
 
 minetest.register_node("robo_ally:conveyorbelt", {
     description = "Conveyor Belt",
-    drawtype = nodebox,
+    drawtype = "nodebox",
     walkable = true,
     groups = {cracky = 1, level = 2},
-    tiles = {"floorpiece.png"},
+    tiles = {"treadmill_orange_top.png",
+             "treadmill_orange_top.png",
+             "treadmill_orange_side.png",
+             "treadmill_orange_side.png",
+             "base_side_dark.png",
+             "base_side_dark.png"
+    },
     use_texture_alpha = "clip",
     is_ground_content = false,
     paramtype = "light",
     sunlight_propagates = true,
     paramtype2 = "facedir",
     walkable = true,
+    node_box = {
+        type = "fixed",
+        fixed = {
+            {(-7/16), -0.5, (-5/16),    (7/16), (-4/16), (5/16)}, --base
+            {-0.5, (-7/16), (-5/16),    0.5, (-5/16), (5/16)}, --longer base
+            {(-7/16), (-7/16), (-7/16), (-5/16), (-5/16), (7/16)}, --stick 1
+            {(-4/16), (-7/16), (-7/16), (-2/16), (-5/16), (7/16)}, --stick 2
+            {(-1/16), (-7/16), (-7/16), (1/16), (-5/16), (7/16)}, --stick 3
+            {(2/16), (-7/16), (-7/16), (4/16), (-5/16), (7/16)}, --stick 4
+            {(5/16), (-7/16), (-7/16), (7/16), (-5/16), (7/16)} --stick 5
+--           X      Y         Z         left-right, up-down, forwards-backwards
+        },
+    }
 })
 
 
@@ -107,7 +126,7 @@ minetest.register_node("robo_ally:checkpoint", {
         fixed = {
             {-0.5, -0.5, -0.5,    0.5, (-7/16), 0.5}, --floor
             {-0.5, -0.5, 0.5,     (-7/16), (-1/16), (7/16)}, --stick
-            {-0.5, (-1/16), 0.5,        (-2/16), (3/16), (7/16)}, --flag
+            {-0.5, (-1/16), 0.5,        (-2/16), (3/16), (7/16)} --flag
         },
     }
 })
