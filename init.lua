@@ -10,7 +10,7 @@ minetest.register_node("roborally:redgear", {
     drawtype = "signlike",
     groups = {cracky = 1, level = 2},
     tiles = {"gear_red.png"},
-    use_texture_aplha = "clip",
+    use_texture_alpha = "blend",
     is_ground_content = false,
     paramtype = "light",
     sunlight_propagates = false,
@@ -27,7 +27,7 @@ minetest.register_node("roborally:greengear", {
     drawtype = "signlike",
     groups = {cracky = 1, level = 2},
     tiles = {"gear_green.png"},
-    use_texture_aplha = "clip",
+    use_texture_alpha = "clip",
     is_ground_content = false,
     paramtype = "light",
     sunlight_propagates = false,
@@ -39,6 +39,46 @@ minetest.register_node("roborally:greengear", {
     }
 })
 
+minetest.register_node("roborally:repairsite", {
+    description = "Repair Site",
+    drawtype = "signlike",
+    groups = {cracky = 1, level = 2},
+    tiles = {"repair_site1.png^[transformR90"},
+    use_texture_alpha = "clip",
+    is_ground_content = false,
+    paramtype = "light",
+    sunlight_propagates = false,
+    paramtype2 = "wallmounted",
+    walkable = false,
+    inventory_image = "repair_site1.png",
+    selection_box = {
+        type = "wallmounted",
+    }
+})
+
+minetest.register_node("roborally:repairsite2", {
+    description = "Double Repair Site",
+    drawtype = "signlike",
+    groups = {cracky = 1, level = 2},
+    tiles = {"repair_site1.png^repair_site2.png^[transformR90"},
+    use_texture_alpha = "clip",
+    is_ground_content = false,
+    paramtype = "light",
+    sunlight_propagates = false,
+    paramtype2 = "wallmounted",
+    walkable = false,
+    inventory_image = "repair_site1.png^repair_site2.png",
+    selection_box = {
+        type = "wallmounted",
+    }
+})
+
+
+
+
+
+
+
 minetest.register_node("roborally:checkpoint", {
     description = "Checkpoint",
     walkable = false,
@@ -49,7 +89,7 @@ minetest.register_node("roborally:checkpoint", {
     tiles = {"checkpoint_base_top.png",
              "checkpoint_base_side.png"
     },
-    use_texture_aplha = "blend",
+    use_texture_alpha = "blend",
     node_box = {
         type = "fixed",
         fixed = {
