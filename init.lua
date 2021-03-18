@@ -1,11 +1,11 @@
-minetest.register_node("roborally:floorpiece", {
+minetest.register_node("robo_ally:floorpiece", {
     description = "Floorpiece",
     walkable = true,
     groups = {cracky = 1, level = 2},
     tiles = {"floorpiece.png",}
 })
 
-minetest.register_node("roborally:redgear", {
+minetest.register_node("robo_ally:redgear", {
     description = "Red Gear",
     drawtype = "signlike",
     groups = {cracky = 1, level = 2},
@@ -22,7 +22,7 @@ minetest.register_node("roborally:redgear", {
     }
 })
 
-minetest.register_node("roborally:greengear", {
+minetest.register_node("robo_ally:greengear", {
     description = "Green Gear",
     drawtype = "signlike",
     groups = {cracky = 1, level = 2},
@@ -39,7 +39,7 @@ minetest.register_node("roborally:greengear", {
     }
 })
 
-minetest.register_node("roborally:repairsite", {
+minetest.register_node("robo_ally:repairsite", {
     description = "Repair Site",
     drawtype = "signlike",
     groups = {cracky = 1, level = 2},
@@ -56,7 +56,7 @@ minetest.register_node("roborally:repairsite", {
     }
 })
 
-minetest.register_node("roborally:repairsite2", {
+minetest.register_node("robo_ally:repairsite2", {
     description = "Double Repair Site",
     drawtype = "signlike",
     groups = {cracky = 1, level = 2},
@@ -79,7 +79,7 @@ minetest.register_node("roborally:repairsite2", {
 
 
 
-minetest.register_node("roborally:checkpoint", {
+minetest.register_node("robo_ally:checkpoint", {
     description = "Checkpoint",
     walkable = false,
     groups = {cracky = 1, level = 2},
