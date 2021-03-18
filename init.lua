@@ -2,7 +2,8 @@ minetest.register_node("robo_ally:floorpiece", {
     description = "Floorpiece",
     walkable = true,
     groups = {cracky = 1, level = 2},
-    tiles = {"floorpiece.png",}
+    tiles = {"floorpiece.png"},
+    is_ground_content = false
 })
 
 minetest.register_node("robo_ally:redgear", {
@@ -13,7 +14,7 @@ minetest.register_node("robo_ally:redgear", {
     use_texture_alpha = "blend",
     is_ground_content = false,
     paramtype = "light",
-    sunlight_propagates = false,
+    sunlight_propagates = true,
     paramtype2 = "wallmounted",
     walkable = false,
     inventory_image = "gear_red.png",
@@ -30,7 +31,7 @@ minetest.register_node("robo_ally:greengear", {
     use_texture_alpha = "clip",
     is_ground_content = false,
     paramtype = "light",
-    sunlight_propagates = false,
+    sunlight_propagates = true,
     paramtype2 = "wallmounted",
     walkable = false,
     inventory_image = "gear_green.png",
@@ -47,7 +48,7 @@ minetest.register_node("robo_ally:repairsite", {
     use_texture_alpha = "clip",
     is_ground_content = false,
     paramtype = "light",
-    sunlight_propagates = false,
+    sunlight_propagates = true,
     paramtype2 = "wallmounted",
     walkable = false,
     inventory_image = "repair_site1.png",
@@ -64,7 +65,7 @@ minetest.register_node("robo_ally:repairsite2", {
     use_texture_alpha = "clip",
     is_ground_content = false,
     paramtype = "light",
-    sunlight_propagates = false,
+    sunlight_propagates = true,
     paramtype2 = "wallmounted",
     walkable = false,
     inventory_image = "repair_site1.png^repair_site2.png",
@@ -73,8 +74,19 @@ minetest.register_node("robo_ally:repairsite2", {
     }
 })
 
-
-
+minetest.register_node("robo_ally:conveyorbelt", {
+    description = "Conveyor Belt",
+    drawtype = nodebox,
+    walkable = true,
+    groups = {cracky = 1, level = 2},
+    tiles = {"floorpiece.png"},
+    use_texture_alpha = "clip",
+    is_ground_content = false,
+    paramtype = "light",
+    sunlight_propagates = true,
+    paramtype2 = "facedir",
+    walkable = true,
+})
 
 
 
