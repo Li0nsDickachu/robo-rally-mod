@@ -130,3 +130,29 @@ minetest.register_node("robo_ally:checkpoint", {
         },
     }
 })
+
+minetest.register_node("robo_ally:wall", {
+    description = "Wall",
+    walkable = true,
+    groups = {cracky = 1, level = 2},
+    drawtype = "nodebox",
+    paramtype = "light",
+    sunlight_propagates = true,
+    paramtype2 = "facedir",
+    tiles = {"wall_top.png",
+             "base_side.png"
+    },
+    use_texture_alpha = "blend",
+    collision_box = {
+        type = "fixed",
+        fixed = {
+            {-0.5, -0.5, (5/16),    0.5, 0.5, 0.5}
+        },
+    },
+    node_box = {
+        type = "fixed",
+        fixed = {
+            {-0.5, -0.5, (5/16),    0.5, (-4/16), 0.5} --wall
+        },
+    }
+})
